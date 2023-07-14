@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE="my_c_file.c" cpp-E $CFILE > c
