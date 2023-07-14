@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="my_c_file.c" OUTPUT_FILE = "c"  gcc -E $CFILE > $OUTPUT_FILE echo $OUTPUT_FILE
+gcc -E $CFILE -o c
