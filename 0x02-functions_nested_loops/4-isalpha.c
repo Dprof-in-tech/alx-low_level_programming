@@ -9,7 +9,6 @@
 
 int _isalpha(int c)
 {
-	char c = 'a';
 	if (c >= 65 && c <= 122)
 	{
 		return (1);
