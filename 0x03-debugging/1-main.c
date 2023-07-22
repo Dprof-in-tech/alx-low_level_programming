@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
-* main - entry point
-*
-* Description: This function  causes an infinite loop
-* Return: Always 0 (Success)
+* main - causes an infinite loop
+* Return: 0 
 */
 
 int main(void)
