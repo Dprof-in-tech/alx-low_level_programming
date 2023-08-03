@@ -3,8 +3,8 @@
 /**
  * _puts_recursion - function to print a string
  *
- * @s - input string
- * Return: Alwyas 0 
+ * @s:  input string
+ * Return: Alwyas 0
  */
 
 void _puts_recursion(char *s)
