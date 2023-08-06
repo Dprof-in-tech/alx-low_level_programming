@@ -15,8 +15,8 @@ int main(int argc, char **argv)
 {
 	while (argc--)
 	{
-		printf ("%s\n", *argv++);
+		printf (" %s\n ", *argv++);
 	}
 
-	exit (EXIT_SUCCESS);
+	return (0);
 }

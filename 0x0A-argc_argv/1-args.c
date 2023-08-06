@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 {
 	if (*argv++)
 	{
-		printf ("%d\n", --argc);
+		printf (" %d\n ", --argc);
 	}
-	exit (EXIT_SUCCESS);
+	return (0);
 }
