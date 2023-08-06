@@ -7,12 +7,12 @@
  * @argc: contains argument array count
  * @argv: array containing arguments to print
  *
- * exit- success value from standard library
+ * Return: Always 0 (success)
  */
 
 int main(int argc, char **argv)
 {
 	while (argc--)
 		printf("%s\n", *argv++);
-	exit(EXIT_SUCCESS);
+	return (0);
 }
