@@ -7,7 +7,7 @@
  * @argc: contains argument array count
  * @argv: array containing arguments to print
  *
- * return- 0 Always success
+ * exit- success value from standard library
  */
 
 int main(int argc, char **argv)
