@@ -4,8 +4,12 @@
 
 /**
  * main- Function that prints the addition of arguments
+ * is_positive_integer - Function that checks the ASCII values of the argument
  * @argc: Contains the number of arguments
  * @argv: Array containing the arguments
+ * @result: Stores the results of the operation
+ * @a: used to check the while function condition
+ * @str: Variable that stores the argument character to be checked
  *
  * Return: Always 0 (success)
  */
