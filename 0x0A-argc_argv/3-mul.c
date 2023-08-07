@@ -7,15 +7,15 @@
  * @argc: contains the array count
  * @argv: array containing input characters\
  * @num1: input number 1
- * @num2: input number 2
- * @result: result of mathematicla operations between num 1 and num 2
  *
  * Return: Always 0 (success)
  */
 
 int main(int argc, char **argv)
 {
-	int result, num1, num2;
+	int result = 0;
+	int num1 = 0;
+	int num2 = 0;
 
 	if (argc != 3)
 	{

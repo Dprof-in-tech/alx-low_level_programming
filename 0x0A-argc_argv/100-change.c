@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * main - Calculates the minimum number of coins needed to make change for a given amount of money in cents.
+ * main - Calculates number of coins for an amount of money in cents.
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line arguments.
  *
@@ -16,15 +15,13 @@ int main(int argc, char **argv)
 	int numCoins = sizeof(money) / sizeof(money[0]);
 	int number = 0;
 	int a = 0;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-       
 	c = atoi(argv[1]);
-
 	if (c < 0)
 	{
 		printf("0\n");
