@@ -4,8 +4,8 @@
 
 /**
  * main- Function that prints the addition of arguments
- * @argc: contains the number of arguments
- * @argv: array containing the arguments
+ * @argc: Contains the number of arguments
+ * @argv: Array containing the arguments
  *
  * Return: Always 0 (success)
  */
