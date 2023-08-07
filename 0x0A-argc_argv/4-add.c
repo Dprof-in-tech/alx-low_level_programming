@@ -42,7 +42,9 @@ int is_positive_integer(const char *str)
 	while (*str)
 	{
 		if (*str < '0' || *str > '9')
+		{
 			return (0);
+		}
 		str++;
 	}
 
