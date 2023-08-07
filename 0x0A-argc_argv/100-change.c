@@ -3,8 +3,7 @@
 #include "main.h"
 
 /**
- * main - Calculates the minimum number of coins needed to make change
- *        for a given amount of money in cents.
+ * main - Calculates the minimum number of coins needed to make change for a given amount of money in cents.
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line arguments.
  *
