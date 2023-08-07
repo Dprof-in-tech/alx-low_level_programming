@@ -18,7 +18,10 @@ int main(int argc, char **argv)
 	int result, num1, num2;
 
 	if (argc != 3)
+	{
 		printf("Error\n");
+		return (1);
+	}
 	else
 	{
 		num1 = atoi(argv[1]);
@@ -28,5 +31,6 @@ int main(int argc, char **argv)
 
 		printf("%d\n", result);
 	}
+
 	return (0);
 }
