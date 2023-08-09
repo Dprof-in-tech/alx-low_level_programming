@@ -16,10 +16,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, str_len1, str_len2;
 
 	if (s1 == NULL)
-		s1 = '\0';
-
+		s1 = "";
 	if (s2 == NULL)
-		s2 = '\0';
+		s2 = "";
 
 	str_len1 = 0;
 	str_len2 = 0;
