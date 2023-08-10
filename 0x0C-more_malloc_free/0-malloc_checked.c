@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * malloc_checked - Function to check malloc for a string and return pointer
@@ -11,9 +11,9 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *string;
+	void *string;
 
-	string = malloc(sizeof(char) * b);
+	string = malloc(b);
 
 	if (string == NULL)
 		exit(98);
