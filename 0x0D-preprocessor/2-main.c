@@ -9,6 +9,12 @@
 
 int main(void)
 {
-	putchar('__FILE__\n');
+	for (int i = 0; __FILE__[i] != '\0'; i++)
+	{
+		putchar(__FILE__[i]);
+	}
+
+	putchar('\n');
+
 	return (0);
 }
