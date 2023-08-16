@@ -9,12 +9,6 @@
 
 int main(void)
 {
-	for (int i = 0; __FILE__[i] != '\0'; i++)
-	{
-		putchar(__FILE__[i]);
-	}
-
-	putchar('\n');
-
+	printf("%s\n", __FILE__);
 	return (0);
 }
