@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	void (*pointer)(void) = main;
+	int (*pointer)(int, char**) = &main;
 
 	unsigned char *opcodes = (unsigned char *)pointer;
 
