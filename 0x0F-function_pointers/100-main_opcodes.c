@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	for (j = 0; j < i; j++)
 	{
 		printf("%02x\n", opcodes[j]);
-		if ( j < i - 1)
+		if (j < i - 1)
 		{
 			printf(" ");
 		}
