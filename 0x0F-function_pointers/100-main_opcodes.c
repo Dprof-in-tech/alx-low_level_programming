@@ -25,15 +25,17 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	int (*pointer)(int, char**) = &main;
-
-	unsigned char *opcodes = (unsigned char *)pointer;
+	unsigned char *opcodes = (unsigned char *)main;
 
 	int j;
 
 	for (j = 0; j < i; j++)
 	{
 		printf("%02x\n", opcodes[j]);
+		if ( j < i - 1)
+		{
+			printf(" ");
+		}
 	}
 	return (0);
 }
