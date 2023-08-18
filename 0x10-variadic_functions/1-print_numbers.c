@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(number, n);
 	if (separator == NULL)
 	{
-		separator = " ";
+		separator = "";
 	}
 	for (j = 0; j < n; j++)
 	{
