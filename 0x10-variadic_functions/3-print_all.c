@@ -20,16 +20,26 @@ void print_all(const char * const format, ...)
 	va_start(all, format);
 	while (format && format[i])
 	{
-		printf("%s%c", separator, va_arg(all, int));
-		printf("%s%d", separator, va_arg(all, int));
-		printf("%s%f", separator, va_arg(all, double));
-		if (format[i] == 's')
+		switch(format[i])
 		{
-			str = va_arg(all, char *);
-			if (str == NULL)
-			{
-				printf("%s(nil)", separator);
-			}
+			case 'c':
+				printf("%s%c", separator, va_arg(all, int));
+				break;
+			case 'i':
+				printf("%s%d", separator, va_arg(all, int));
+				break;
+			case 'f':
+				printf("%s%f", separator, va_arg(all, double));
+				break;
+			case 's':
+				str = va_arg(all, char *);
+				if (str == NULL)
+				{
+					printf("%s(nil)", separator);
+				}
+				if (str != NULL)
+					printf("%s%s", separator, str);
+				break;
 		}
 
 		separator = ", ";
