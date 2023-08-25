@@ -1,19 +1,18 @@
+extern printf
+
 section .data
-    hello db "Hello, Holberton", 0
-    format db "%s", 0
-    newline db 10, 0  ; Newline character followed by null terminator
+    message: db "Hello, Holberton", 0
+    format: db "%s", 10, 0
 
 section .text
     global main
-    extern printf
 
 main:
     push rbp
     mov rdi, format
-    mov rsi, hello
-    call printf
-    mov rdi, format
-    mov rsi, newline
+    mov rsi, message
+    mov rax, 0
     call printf
     pop rbp
+    mov rax, 0
     ret
