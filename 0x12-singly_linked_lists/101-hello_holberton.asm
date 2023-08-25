@@ -1,7 +1,7 @@
 section .data
     hello db "Hello, Holberton", 0
     format db "%s", 0
-    newline db 10, 0
+    newline db 10, 0  ; Newline character followed by null terminator
 
 section .text
     global main
@@ -12,7 +12,8 @@ main:
     mov rdi, format
     mov rsi, hello
     call printf
-    mov rdi, newline
+    mov rdi, format
+    mov rsi, newline
     call printf
     pop rbp
     ret
