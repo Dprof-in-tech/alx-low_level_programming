@@ -4,7 +4,7 @@
 
 /**
  * pop_listint - Function to delete node
- * @head - List head
+ * @head: List head
  *
  * Return: Always 0 success
  */
