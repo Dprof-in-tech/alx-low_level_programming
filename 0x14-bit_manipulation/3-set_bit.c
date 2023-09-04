@@ -5,8 +5,8 @@
  * set_bit - Function to set bit value at given index
  * @n: input value
  * @index: specified index
- * 
- * Return: Given bit value
+ *
+ * Return: Always 0 success
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
