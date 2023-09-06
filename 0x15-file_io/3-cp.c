@@ -1,5 +1,6 @@
 #include "main.h"
 #include <errno.h>
+#define BUFFER_SIZE 1024
 
 /**
  * main -  Function to print stabdard error
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	while ((bytes_read = read(source_file, buffer, sizeof(buffer))))
+	while ((bytes_read = read(source_file, buffer, BUFFER_SIZE)) > 0)
 	{
 		bytes_written = write(recieving_file, buffer, bytes_read);
 		if (bytes_written != bytes_read)
