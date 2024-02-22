@@ -6,7 +6,7 @@ SRC = main.c school.c
 
 all: $(EXECUTABLE)
 
-$(EXECUTABLE):
+$(EXECUTABLE): $(SRC)
 	$(CC) $(SRC) -o $(EXECUTABLE)
 
 clean:
