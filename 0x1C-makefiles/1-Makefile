@@ -1,4 +1,4 @@
-EXECUTABLE: school
+EXECUTABLE = school
 
 CC = gcc
 
