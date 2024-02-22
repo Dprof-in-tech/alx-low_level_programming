@@ -3,7 +3,7 @@ EXECUTABLE = school
 all: $(EXECUTABLE)
 
 $(EXECUTABLE):
-	gcc -o $(EXECUTABLE) main.c
+	gcc main.c school.c -o $(EXECUTABLE)
 
 clean:
 	@rm -f $(EXECUTABLE)
