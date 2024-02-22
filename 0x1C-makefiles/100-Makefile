@@ -1,19 +1,20 @@
 NAME = school
 
-SRC = main.c school.c
+SRC = $(wildcard *.c)
 
 OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+.PHONY: all clean oclean fclean re
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CC) $(OBJ) -o $@
-	@echo "Linking $@..."
 
 clean:
-	@$(RM) *~ $(NAME) $(OBJ)
+	@$(RM) *~ $(NAME)
 	@echo "Cleaning..."
 
 oclean:
@@ -27,6 +28,4 @@ re: fclean all
 	@echo "Recompiling..."
 
 $(OBJ): $(SRC)
-	@$(CC) $(CFLAGS) -c $^ -o $@
-
-.PHONY: all clean oclean fclean re
+	@$(CC) $(CFLAGS) -c $< -o $@
