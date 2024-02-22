@@ -1,0 +1,17 @@
+EXECUTABLE = school
+
+CC = gcc
+
+SRC = *.c
+
+OBJ = *.o
+
+NAME = $(EXECUTABLE)
+
+all: $(NAME)
+
+$(EXECUTABLE): $(SRC)
+	$(CC) $(SRC) $(OBJ) -o $(NAME)
+
+clean:
+	rm -r $(NAME)
