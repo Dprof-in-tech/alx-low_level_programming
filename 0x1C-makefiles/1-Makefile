@@ -1,6 +1,9 @@
 EXECUTABLE: school
-CC=gcc
-SRC=*.c
+
+CC = gcc
+
+SRC = main.c school.c
+
 all: $(EXECUTABLE)
 
 $(EXECUTABLE):
