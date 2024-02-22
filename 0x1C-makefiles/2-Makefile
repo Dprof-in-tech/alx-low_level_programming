@@ -1,17 +1,20 @@
-EXECUTABLE = school
+NAME = school
 
 CC = gcc
 
 SRC = *.c
 
-OBJ = *.o
+OBJ = $(SRC:.c=.o)
 
 NAME = $(EXECUTABLE)
 
 all: $(NAME)
 
-$(EXECUTABLE): $(SRC)
-	$(CC) $(SRC) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	%(CC) -c %< -o $@
 
 clean:
-	rm -r $(NAME)
+	rm -r $(OBJ) $(NAME)
