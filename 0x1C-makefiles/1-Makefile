@@ -1,0 +1,10 @@
+EXECUTABLE: school
+CC=gcc
+SRC=*.c
+all: $(EXECUTABLE)
+
+$(EXECUTABLE):
+	$(CC) $(SRC) -o $(EXECUTABLE)
+
+clean:
+	rm -f $(EXECUTABLE)
