@@ -1,31 +1,60 @@
-NAME = school
+# Compiler
+CC = gcc
 
+# Source files
 SRC = $(wildcard *.c)
 
+# Executable name
+NAME = school
+
+# Object files (derived from source files)
 OBJ = $(SRC:.c=.o)
 
+# Program to remove files
+RM = rm -rf
+
+# Favorite compiler flags (passed directly to the compiler)
 CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Rules
 
 .PHONY: all clean oclean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(OBJ) -o $@
+	$(CC) $(CFLAGS) $^ -o $@
+
+# Make sure m.h exists before compilation
+m.h:
+	@echo "Missing header file m.h. Make sure it exists before building."
+	@exit 1
+
+# Cleaning rules
 
 clean:
-	@$(RM) *~ $(NAME)
-	@echo "Cleaning..."
+	$(RM) $(NAME)
 
 oclean:
-	@$(RM) $(OBJ)
-	@echo "Deleting object files..."
+	$(RM) $(OBJ)
 
 fclean: clean oclean
-	@echo "Fully cleaning..."
 
 re: fclean all
-	@echo "Recompiling..."
 
-$(OBJ): $(SRC)
-	@$(CC) $(CFLAGS) -c $< -o $@
+
+# Ensure $(RM) is used for cleaning
+.PHONY: clean oclean fclean
+$(clean):
+	@$(RM) $(NAME)
+$(oclean):
+	@$(RM) $(OBJ)
+$(fclean):
+	@$(RM) $(NAME) $(OBJ)
+
+
+# Use wildcards and avoid explicit lists
+.PHONY: OBJ
+$(OBJ): %.o: %.c m.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
